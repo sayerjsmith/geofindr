@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeoGuessr Mini</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+<body>
+  <div id="start-screen">
+    <h1>🌍 GeoGuessr Lite</h1>
+    <button id="playBtn">Play</button>
+  </div>
+
+  <div id="game-ui" style="display:none;">
+    <div id="scoreboard">Score: <span id="score">0</span> | Round <span id="round">1</span>/5</div>
+    <div id="street-view"></div>
+    <div id="mini-map-container">
+      <div id="mini-map"></div>
+      <button id="fullscreenBtn">➕</button>
+    </div>
+    <button id="guessBtn">Make Guess</button>
+  </div>
+
+  <div id="end-screen" style="display:none;">
+    <h2>Game Over</h2>
+    <p>Your total score: <span id="finalScore"></span></p>
+    <button onclick="location.reload()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
